@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react';
 import renderWithRouter from '../renderWithRouter';
 import App from '../App';
 
-describe('Teste do App.tsx', () => {
+describe('1 - Teste do App.tsx', () => {
   test('Testando o componente App.tsx', () => {
     renderWithRouter(<App />);
     // acessar

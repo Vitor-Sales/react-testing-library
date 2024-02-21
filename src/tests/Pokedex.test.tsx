@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react';
 import renderWithRouter from '../renderWithRouter';
 import App from '../App';
 
-describe('Testando Pokédex', () => {
+describe('5 - Testando Pokédex', () => {
   test('Teste se a página contém um heading h2 com o texto Encountered Pokémon', () => {
     renderWithRouter(<App />);
 

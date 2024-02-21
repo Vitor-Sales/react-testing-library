@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react';
 import renderWithRouter from '../renderWithRouter';
 import App from '../App';
 
-describe('Testando página favorite pokémons', () => {
+describe('3 - Testando página favorite pokémons', () => {
   test('Se mostra a mensagem "No favorite pokémons found"', () => {
     // mock
     // render

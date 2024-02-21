@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react';
 import renderWithRouter from '../renderWithRouter';
 import App from '../App';
 
-test('Testando a página About: Info, Titulo, parágrafos e imagem', () => {
+test('2 - Testando a página About: Info, Titulo, parágrafos e imagem', () => {
   renderWithRouter(<App />, { route: '/about' });
   const headingAbout = screen.getByText(/About Pokédex/i);
   const allParagraphs = screen.getAllByText(/pokémon/i, { selector: 'p' });
