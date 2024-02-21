@@ -15,25 +15,25 @@ test('Testando o componente App.tsx', () => {
   expect(allLinks[2]).toBe('Favorite Pokémon');
 });
 
-test('Testando navegação da página', () => {
+test('Testando navegação da página', async () => {
   const { user } = renderWithRouter(<App />);
   expect(screen.getByText('Encountered Pokémon')).toBeInTheDocument();
 
   const linkAbout = screen.getByRole('link', { name: 'About' });
 
-  user.click(linkAbout);
+  await user.click(linkAbout);
 
   expect(screen.getByText('About Pokédex')).toBeInTheDocument();
 
   const linkFavorite = screen.getByRole('link', { name: /Favorite Pokémon/i });
 
-  user.click(linkFavorite);
+  await user.click(linkFavorite);
 
   expect(screen.getByText(/Favorite Pokémon/i)).toBeInTheDocument();
 
   const linkHome = screen.getByRole('link', { name: 'Home' });
 
-  user.click(linkHome);
+  await user.click(linkHome);
 
   expect(screen.getByText(/Encountered Pokémon/i)).toBeInTheDocument();
 });
